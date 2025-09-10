@@ -1,0 +1,40 @@
+<!-- client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Your existing website content goes here -->
+    
+    <!-- AI Fitness Coach Widget -->
+    <div id="chat-widget-container">
+        <div id="chat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div id="chat-window" class="hidden">
+            <div id="chat-header">
+                <h3>FitBot Coach</h3>
+                <button id="close-chat">✕</button>
+            </div>
+            <div id="chat-body">
+                <!-- Messages will be injected here -->
+            </div>
+            <div id="chat-footer">
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Ask a fitness question..." autocomplete="off">
+                    <button type="submit" id="send-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
