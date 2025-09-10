@@ -1,4 +1,3 @@
-// server/server.js
 require('dotenv').config();
 const express = require('express');
 const OpenAI = require('openai');
@@ -16,12 +15,8 @@ const openai = new OpenAI({
 
 let assistantId;
 
-// Function to get or create the assistant
 async function getOrCreateAssistant() {
-    // ---- IMPORTANT ----
-    // To avoid creating a new assistant on every server restart,
-    // paste your assistant ID here once it's created.
-    const existingAssistantId = null; // e.g., "asst_abc123..."
+    const existingAssistantId = "asst_99WeH5Jn4Z96dvYfFeNULL5Q";
 
     try {
         if (existingAssistantId) {
@@ -50,7 +45,6 @@ async function getOrCreateAssistant() {
     }
 }
 
-// Endpoint to start a new chat (creates a thread)
 app.post('/start', async (req, res) => {
     console.log("Received request to start a new session.");
     try {
@@ -63,7 +57,6 @@ app.post('/start', async (req, res) => {
     }
 });
 
-// Endpoint to handle chat messages (NOW WITH createAndPoll)
 app.post('/chat', async (req, res) => {
     const { threadId, message } = req.body;
     console.log(`Received message: "${message}" for thread: ${threadId}`);
@@ -73,14 +66,12 @@ app.post('/chat', async (req, res) => {
     }
 
     try {
-        // Add the user's message to the thread
         await openai.beta.threads.messages.create(threadId, {
             role: "user",
             content: message
         });
         console.log("Message added to thread. Running assistant...");
 
-        // Create a run and poll for its completion
         const run = await openai.beta.threads.runs.createAndPoll(threadId, {
             assistant_id: assistantId,
         });
@@ -89,7 +80,6 @@ app.post('/chat', async (req, res) => {
 
         if (run.status === 'completed') {
             const messages = await openai.beta.threads.messages.list(threadId);
-            // The latest message is at the top of the list
             const response = messages.data[0].content[0].text.value;
             console.log("Assistant response:", response);
             res.json({ response });
@@ -104,7 +94,6 @@ app.post('/chat', async (req, res) => {
     }
 });
 
-// Initialize the assistant and start the server
 getOrCreateAssistant().then(() => {
     app.listen(port, () => {
         console.log(`Server running at http://localhost:${port}`);

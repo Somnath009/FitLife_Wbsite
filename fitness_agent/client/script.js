@@ -1,4 +1,3 @@
-// client/script.js
 document.addEventListener('DOMContentLoaded', () => {
     const chatIcon = document.getElementById('chat-icon');
     const chatWindow = document.getElementById('chat-window');
@@ -59,17 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Helper Functions ---
-
     /**
      * Converts basic Markdown (bold and newlines) to HTML.
      * @param {string} text The text to convert.
      * @returns {string} The formatted HTML.
      */
     function markdownToHtml(text) {
-        // Convert **bold** to <strong>bold</strong>
         let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        // Convert newlines to <br> tags
         html = html.replace(/\n/g, '<br>');
         return html;
     }
@@ -79,14 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         messageElement.classList.add('chat-message', `${sender}-message`);
 
         if (sender === 'bot') {
-            // For bot messages, convert markdown and render as HTML
             messageElement.innerHTML = markdownToHtml(text);
         } else {
-            // For user messages, just display plain text
             messageElement.textContent = text;
         }
 
         chatBody.appendChild(messageElement);
-        chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
+        chatBody.scrollTop = chatBody.scrollHeight;
     }
 });
