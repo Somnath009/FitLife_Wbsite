@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In / Sign Up • FitLife</title>
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script defer src="auth.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="form-flipper" id="formFlipper">
+      <!-- Sign In Form -->
+      <div class="form-wrapper sign-in">
+        <form class="card form" id="signInForm" novalidate>
+          <a href="../landing_page/hero.html" class="brand">FitLife</a>
+          <h2>Welcome Back</h2>
+          <p class="muted">Enter your credentials to access your account.</p>
+
+          <div class="field">
+            <label for="signInEmail">Email</label>
+            <input id="signInEmail" name="email" type="email" placeholder="name@email.com" required />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="field">
+            <label for="signInPassword">Password</label>
+            <input id="signInPassword" name="password" type="password" placeholder="••••••••" required />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="form-actions">
+            <a href="#" class="muted">Forgot Password?</a>
+            <button type="submit" class="btn primary">Sign In</button>
+          </div>
+
+          <p class="switch-form muted">
+            No account? <button type="button" class="link-btn" id="showSignUp">Sign up</button>
+          </p>
+        </form>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div class="form-wrapper sign-up">
+        <form class="card form" id="signUpForm" novalidate>
+          <a href="../landing_page/hero.html" class="brand">FitLife</a>
+          <h2>Create Account</h2>
+          <p class="muted">Start your fitness journey with a free account.</p>
+
+          <div class="field">
+            <label for="signUpName">Full Name</label>
+            <input id="signUpName" name="name" type="text" placeholder="Enter your name" required />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="field">
+            <label for="signUpEmail">Email</label>
+            <input id="signUpEmail" name="email" type="email" placeholder="name@email.com" required />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="field">
+            <label for="signUpPassword">Password</label>
+            <input id="signUpPassword" name="password" type="password" placeholder="Create a strong password" required minlength="8" />
+            <small class="error-msg"></small>
+          </div>
+          
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required />
+            <small class="error-msg"></small>
+          </div>
+
+          <button type="submit" class="btn primary">Create Account</button>
+
+          <p class="switch-form muted">
+            Already have an account? <button type="button" class="link-btn" id="showSignIn">Sign in</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

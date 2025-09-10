@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrition • FitLife</title>
+  <link rel="stylesheet" href="nutrition.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script defer src="nutrition.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="../landing_page/hero.html" class="brand">FitLife</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="../landing_page/hero.html#home">Home</a></li>
+        <li><a href="../about_section/index.html">About</a></li>
+        <li><a href="../workout_page/index.html">Workouts</a></li>
+        <li><a class="active" href="#">Nutrition</a></li>
+        <li><a href="../blog_page/index.html">Blog</a></li>
+        <li><a href="../contact_page/index.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- <button class="icon-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <a class="btn ghost small" href="#">Sign in</a>
+        <a class="btn primary small" href="#">Sign up</a> -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero nutrition-hero">
+    <div class="hero-content container">
+      <h1>Fuel Your <span class="accent">Goals</span></h1>
+      <p>Clean bulking, fat‑loss, or cutting—build plates with the right mix of protein, smart carbs, and healthy fats.</p>
+    </div>
+  </section>
+
+  <!-- Quick tabs -->
+  <section class="section container">
+    <div class="pill-tabs" role="tablist">
+      <button class="pill active" data-target="#gain">Weight Gain</button>
+      <button class="pill" data-target="#loss">Weight Loss</button>
+      <button class="pill" data-target="#cutting">Cutting</button>
+    </div>
+  </section>
+
+  <!-- Weight Gain -->
+  <section id="gain" class="section container panel visible">
+    <div class="section-head">
+      <h2>Weight Gain</h2>
+      <p>Choose calorie‑dense whole foods to hit a small surplus and support lean mass. Think nuts, dairy, whole grains, avocado, and hearty proteins.</p>
+    </div>
+    <div class="cards food-cards">
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop" alt="Avocado and toast" loading="lazy">
+        <div class="info">
+          <h3>Avocado + Whole‑grain Toast</h3>
+          <p>Energy‑dense monounsaturated fats with fiber‑rich carbs; easy add‑on for surplus calories.</p>
+          <span class="tag">Healthy fats</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop" alt="Peanut butter bowl" loading="lazy">
+        <div class="info">
+          <h3>Nut Butters + Banana</h3>
+          <p>Peanut/almond butter adds calories and protein; pair with fruit or shakes for clean bulk.</p>
+          <span class="tag">Calorie‑dense</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=1200&auto=format&fit=crop" alt="Greek yogurt with nuts" loading="lazy">
+        <div class="info">
+          <h3>Greek Yogurt Parfait</h3>
+          <p>High‑protein dairy topped with granola and mixed nuts for extra calories and crunch.</p>
+          <span class="tag">Protein</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop" alt="Chicken rice bowl" loading="lazy">
+        <div class="info">
+          <h3>Chicken + Rice Bowl</h3>
+          <p>Lean protein with carb base; add olive oil or ghee for surplus and flavor.</p>
+          <span class="tag">Balanced</span>
+        </div>
+      </article>
+    </div>
+    <div class="note card">
+      <p class="muted">Examples align with clean bulking guidance favoring whole‑food calories like nuts, dairy, avocados, rice, and protein sources. [Refs] </p>
+      <ul class="refs">
+        <li>High‑calorie whole‑food options for gaining. [3][18]</li>
+        <li>Snack add‑ons like nuts, yogurt, eggs, and shakes. [6]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Weight Loss -->
+  <section id="loss" class="section container panel">
+    <div class="section-head">
+      <h2>Weight Loss</h2>
+      <p>Prioritize high‑protein, high‑fiber meals to stay full in a small deficit—lean meats, fish, legumes, yogurt, veggies, and whole grains.</p>
+    </div>
+    <div class="cards food-cards">
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1200&auto=format&fit=crop" alt="Grilled salmon and veggies" loading="lazy">
+        <div class="info">
+          <h3>Grilled Salmon + Greens</h3>
+          <p>Protein with omega‑3s supports satiety and cardiometabolic health in calorie control.</p>
+          <span class="tag">Protein • Omega‑3</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1200&auto=format&fit=crop" alt="Greek yogurt and berries" loading="lazy">
+        <div class="info">
+          <h3>Greek Yogurt + Berries</h3>
+          <p>High‑protein dairy plus fiber and polyphenols for a filling snack or breakfast.</p>
+          <span class="tag">High‑protein</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1512621776951-4b87b1ae2c07?q=80&w=1200&auto=format&fit=crop" alt="Bean and quinoa bowl" loading="lazy">
+        <div class="info">
+          <h3>Bean + Quinoa Bowl</h3>
+          <p>Plant protein and fiber‑rich grains help reduce hunger and support steady energy.</p>
+          <span class="tag">Protein • Fiber</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Chicken salad" loading="lazy">
+        <div class="info">
+          <h3>Chicken Salad Wrap</h3>
+          <p>Lean poultry with veggies; choose whole‑grain wrap and light dressing for volume eating.</p>
+          <span class="tag">Lean protein</span>
+        </div>
+      </article>
+    </div>
+    <div class="note card">
+      <ul class="refs">
+        <li>High‑protein foods aiding weight loss: poultry, fish, yogurt, legumes, tofu. [7][16]</li>
+        <li>High‑fiber foods help fullness and appetite control. [19]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Cutting -->
+  <section id="cutting" class="section container panel">
+    <div class="section-head">
+      <h2>Cutting</h2>
+      <p>Hold protein high to maintain muscle, use complex carbs for training, and include healthy fats—simple, consistent meals work best.</p>
+    </div>
+    <div class="cards food-cards">
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1514517220036-2a4d3fc7bb71?q=80&w=1200&auto=format&fit=crop" alt="Eggs and veggies" loading="lazy">
+        <div class="info">
+          <h3>Egg Scramble + Veg</h3>
+          <p>Complete protein and micronutrients; low‑calorie volume with spinach, peppers, mushrooms.</p>
+          <span class="tag">Protein</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop" alt="Turkey and quinoa" loading="lazy">
+        <div class="info">
+          <h3>Turkey + Quinoa + Broccoli</h3>
+          <p>Lean meat with slow‑digesting carbs and fiber to fuel training in a deficit.</p>
+          <span class="tag">Lean • Complex carbs</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop" alt="Chicken and rice" loading="lazy">
+        <div class="info">
+          <h3>Chicken + Rice + Olive Oil</h3>
+          <p>Classic cut: measured carbs with a drizzle of healthy fats to keep meals satisfying.</p>
+          <span class="tag">Balanced</span>
+        </div>
+      </article>
+      <article class="card food">
+        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=1200&auto=format&fit=crop" alt="Tofu stir fry" loading="lazy">
+        <div class="info">
+          <h3>Tofu Veggie Stir‑fry</h3>
+          <p>Plant‑based protein with high‑volume veggies and light sauce for flavor without excess calories.</p>
+          <span class="tag">Plant protein</span>
+        </div>
+      </article>
+    </div>
+    <div class="note card">
+      <ul class="refs">
+        <li>Cutting emphasizes lean proteins and complex carbs like oats, rice, quinoa, potatoes. [8][14]</li>
+        <li>Maintain muscle by keeping protein high during calorie restriction. [8]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><div class="brand">FitLife</div><p>Train smarter, fuel better, live stronger.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="../landing_page/hero.html#workouts">Workouts</a></li><li><a href="./nutrition.html">Nutrition</a></li><li><a href="../landing_page/hero.html#blog">Blog</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      <div><h4>Contact</h4><p>hello@fitlife.app</p></div>
+    </div>
+    <div class="subfooter">© 2025 FitLife. All rights reserved.</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog • FitLife</title>
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script defer src="blog.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="../landing_page/hero.html" class="brand">FitLife</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="../landing_page/hero.html">Home</a></li>
+        <li><a href="../about_section/index.html">About</a></li>
+        <li><a href="../workout_page/index.html">Workouts</a></li>
+        <li><a href="../nutrition_page/index.html">Nutrition</a></li>
+        <li><a class="active" href="#">Blog</a></li>
+        <li><a href="../contact_page/index.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- <button class="icon-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <a class="btn ghost small" href="#">Sign in</a>
+        <a class="btn primary small" href="#">Sign up</a> -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero blog-hero">
+    <div class="hero-content container">
+      <h1>Learn. Apply. <span class="accent">Progress.</span></h1>
+      <p>Evidence‑inspired stories and guides on lifting, healthy food, habit systems, and sleep—so results compound over time.</p>
+    </div>
+  </section>
+
+  <!-- Category filters -->
+  <section class="section container">
+    <div class="pill-tabs" role="tablist">
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="training">Training</button>
+      <button class="pill" data-filter="nutrition">Nutrition</button>
+      <button class="pill" data-filter="sleep">Sleep</button>
+      <button class="pill" data-filter="mindset">Mindset</button>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="section container">
+    <article class="featured card">
+      <img src="https://images.unsplash.com/photo-1517963628607-235ccdd5476a?q=80&w=1600&auto=format&fit=crop" alt="Woman lifting weights" loading="lazy">
+      <div class="f-body">
+        <h2>Progressive Overload Made Simple</h2>
+        <p>Small weekly increases in weight, reps, or sets stimulate adaptation while managing fatigue—track one lever at a time and deload when performance stalls.</p>
+        <div class="meta"><span class="chip">Training</span><span>6 min read</span></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Grid of posts -->
+  <section class="section container">
+    <div id="posts" class="cards posts">
+      <!-- Example articles -->
+      <article class="post card" data-cat="nutrition">
+        <img src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?q=80&w=1600&auto=format&fit=crop" alt="High‑protein bowl" loading="lazy">
+        <div class="body">
+          <h3>Build High‑Protein Plates</h3>
+          <p>Anchor meals with lean protein and fiber‑rich sides to boost satiety and recovery. Practical swaps and a simple plate model inside.</p>
+          <div class="meta"><span class="chip">Nutrition</span><span>5 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="sleep">
+        <img src="https://images.unsplash.com/photo-1519802772250-a52a9af0eacb?q=80&w=1600&auto=format&fit=crop" alt="Cozy sleep scene" loading="lazy">
+        <div class="body">
+          <h3>Sleep: The Underrated PR</h3>
+          <p>Deep sleep releases growth hormone, supports repair, and improves performance—protect the routine like training.</p>
+          <div class="meta"><span class="chip">Sleep</span><span>4 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="training">
+        <img src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=1600&auto=format&fit=crop" alt="Deadlift setup" loading="lazy">
+        <div class="body">
+          <h3>Deadlift Setup Cues</h3>
+          <p>Grip‑brace‑hinge: neutral spine, lats on, bar over mid‑foot—then push the floor away.</p>
+          <div class="meta"><span class="chip">Training</span><span>3 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="nutrition">
+        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1600&auto=format&fit=crop" alt="Colorful meal prep" loading="lazy">
+        <div class="body">
+          <h3>Meal Prep Without Burnout</h3>
+          <p>Batch the bases, season later. Two pans, three proteíns, five mix‑and‑match ideas for busy weeks.</p>
+          <div class="meta"><span class="chip">Nutrition</span><span>5 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="mindset">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600&auto=format&fit=crop" alt="Gym notebook" loading="lazy">
+        <div class="body">
+          <h3>Habit Loops for Consistency</h3>
+          <p>Pair workouts with existing cues, lower the start barrier, and track streaks to make training automatic.</p>
+          <div class="meta"><span class="chip">Mindset</span><span>4 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="sleep">
+        <img src="https://images.unsplash.com/photo-1504707748692-419802cf939d?q=80&w=1600&auto=format&fit=crop" alt="Morning sunlight" loading="lazy">
+        <div class="body">
+          <h3>Sleep Hygiene Checklist</h3>
+          <p>Regular schedule, cool dark room, morning light, caffeine cut‑off, and tech curfew to improve sleep quality.</p>
+          <div class="meta"><span class="chip">Sleep</span><span>5 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="training">
+        <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1600&auto=format&fit=crop" alt="Kettlebell workout" loading="lazy">
+        <div class="body">
+          <h3>HIIT That Won’t Burn You Out</h3>
+          <p>Use work:rest ratios that fit fitness level and rotate modalities to manage fatigue.</p>
+          <div class="meta"><span class="chip">Training</span><span>6 min read</span></div>
+        </div>
+      </article>
+
+      <article class="post card" data-cat="nutrition">
+        <img src="https://images.unsplash.com/photo-1512621776951-4b87b1ae2c07?q=80&w=1600&auto=format&fit=crop" alt="Vegetables and grains" loading="lazy">
+        <div class="body">
+          <h3>Fiber + Protein: The Fullness Duo</h3>
+          <p>Combine fiber‑rich plants and quality protein to reduce hunger and improve adherence in any goal phase.</p>
+          <div class="meta"><span class="chip">Nutrition</span><span>4 min read</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section container newsletter card">
+    <div>
+      <h2>Get new posts weekly</h2>
+      <p class="muted">No spam. Just practical training, nutrition, and recovery tips.</p>
+    </div>
+    <form onsubmit="return false;" class="signup">
+      <input type="email" placeholder="Enter email" required />
+      <button class="btn primary" type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><div class="brand">FitLife</div><p>Train smarter, fuel better, live stronger.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="../landing_page/hero.html#workouts">Workouts</a></li><li><a href="../nutrition_page/nutrition.html">Nutrition</a></li><li><a href="./blog.html">Blog</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      <div><h4>Contact</h4><p>hello@fitlife.app</p></div>
+    </div>
+    <div class="subfooter">© 2025 FitLife. All rights reserved.</div>
+  </footer>
+</body>
+</html>

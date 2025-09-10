@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💪 FitTracker Pro - Ultimate Fitness Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+          <a href="#" class="brand">FitLife</a>
+    
+          <button class="nav-toggle" aria-label="Toggle menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </button>
+    
+          <ul class="nav-links">
+            <li><a href="../landing_page/hero.html">Home</a></li>
+            <li><a href="../about_section/index.html">About</a></li>
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="../nutrition_page/index.html">Nutrition</a></li>
+            <li><a href="../blog_page/index.html">Blog</a></li>
+            <li><a href="../contact_page/index.html">Contact</a></li>
+          </ul>
+    
+          <div class="nav-actions">
+            <!-- <button class="icon-btn" aria-label="Search"> -->
+              <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> -->
+            <!-- </button> -->
+            <!-- <button class="icon-btn" aria-label="Theme" id="themeToggle"> -->
+              <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> -->
+            <!-- </button>
+            <a class="btn ghost small" href="#signin">Sign in</a> -->
+            <!-- <a class="btn primary small" href="#signup">Sign up</a> -->
+          </div>
+        </nav>
+      </header>
+    <!-- Authentication Container -->
+    <div class="container" id="authContainer">
+        <div class="auth-container">
+            <div class="auth-header">
+                <div class="logo">💪 FitTracker Pro</div>
+                <div class="tagline">Transform Your Body, Transform Your Life</div>
+            </div>
+
+            <!-- Form Toggle -->
+            <div class="form-toggle">
+                <div class="toggle-slider" id="toggleSlider"></div>
+                <button class="toggle-btn" id="loginToggle">Login</button>
+                <button class="toggle-btn" id="signupToggle">Sign Up</button>
+            </div>
+
+            <!-- Forms Container -->
+            <div class="forms-container">
+                <div class="form-wrapper" id="formWrapper">
+                    <!-- Login Form -->
+                    <form class="form" id="loginForm">
+                        <div class="input-group">
+                            <input type="email" class="input-field" placeholder="Enter your email" required>
+                            <div class="input-icon">📧</div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="password" class="input-field" placeholder="Enter your password" required>
+                            <div class="input-icon">🔒</div>
+                        </div>
+
+                        <button type="submit" class="auth-btn">
+                            <span class="btn-text">Login to Your Account</span>
+                            <div class="loading" id="loginLoading"></div>
+                        </button>
+
+                        <div class="forgot-link">
+                            <a href="#" id="forgotPassword">Forgot your password?</a>
+                        </div>
+
+                        <div class="social-login">
+                            <div class="social-text">Or continue with</div>
+                            <div class="social-buttons">
+                                <button type="button" class="social-btn google-btn" title="Continue with Google">G</button>
+                                <button type="button" class="social-btn facebook-btn" title="Continue with Facebook">f</button>
+                                <button type="button" class="social-btn twitter-btn" title="Continue with Twitter">t</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Signup Form -->
+                    <form class="form" id="signupForm">
+                        <div class="input-group">
+                            <input type="text" class="input-field" placeholder="Enter your full name" required>
+                            <div class="input-icon">👤</div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" class="input-field" placeholder="Enter your email" required>
+                            <div class="input-icon">📧</div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="password" class="input-field" placeholder="Create a password" required>
+                            <div class="input-icon">🔒</div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" class="input-field" placeholder="Confirm your password" required>
+                            <div class="input-icon">🔑</div>
+                        </div>
+
+                        <button type="submit" class="auth-btn">
+                            <span class="btn-text">Create Your Account</span>
+                            <div class="loading" id="signupLoading"></div>
+                        </button>
+
+                        <div class="social-login">
+                            <div class="social-text">Or sign up with</div>
+                            <div class="social-buttons">
+                                <button type="button" class="social-btn google-btn" title="Sign up with Google">G</button>
+                                <button type="button" class="social-btn facebook-btn" title="Sign up with Facebook">f</button>
+                                <button type="button" class="social-btn twitter-btn" title="Sign up with Twitter">t</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="success-checkmark" id="successCheck"></div>
+        </div>
+    </div>
+
+    <!-- Main App (Hidden Initially) -->
+    <div class="main-app" id="mainApp">
+        <!-- <div class="app-header">
+            <div class="user-welcome" id="userWelcome">Welcome back, Champion! 🏆</div>
+            <div>Ready to crush your fitness goals today?</div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div> -->
+
+        <div class="main-content">
+            <!-- User Profile Card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">👤</span>
+                    User Profile
+                </div>
+                <div class="app-input-group">
+                    <label for="userName">Full Name</label>
+                    <input type="text" id="userName" class="app-input" placeholder="Enter your name" value="John Doe">
+                </div>
+                <div class="app-input-group">
+                    <label for="userAge">Age</label>
+                    <input type="number" id="userAge" class="app-input" placeholder="Age" value="25">
+                </div>
+                <div class="app-input-group">
+                    <label for="userWeight">Weight (kg)</label>
+                    <input type="number" id="userWeight" class="app-input" placeholder="Weight" value="70">
+                </div>
+                <div class="app-input-group">
+                    <label for="userHeight">Height (cm)</label>
+                    <input type="number" id="userHeight" class="app-input" placeholder="Height" value="175">
+                </div>
+                <button class="app-btn" onclick="updateProfile()">Update Profile</button>
+            </div>
+
+            <!-- Daily Goals Card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">🎯</span>
+                    Daily Goals
+                </div>
+                <div class="app-input-group">
+                    <label for="stepGoal">Step Goal</label>
+                    <input type="number" id="stepGoal" class="app-input" placeholder="Daily step goal" value="10000">
+                </div>
+                <div class="app-input-group">
+                    <label for="calorieGoal">Calorie Goal</label>
+                    <input type="number" id="calorieGoal" class="app-input" placeholder="Daily calorie burn goal" value="500">
+                </div>
+                <div class="app-input-group">
+                    <label for="waterGoal">Water Goal (glasses)</label>
+                    <input type="number" id="waterGoal" class="app-input" placeholder="Daily water intake goal" value="8">
+                </div>
+                <button class="app-btn" onclick="setGoals()">Set Goals</button>
+            </div>
+
+            <!-- Activity Tracking Card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">🏃</span>
+                    Track Activity
+                </div>
+                <div class="app-input-group">
+                    <label for="stepCount">Steps Today</label>
+                    <input type="number" id="stepCount" class="app-input" placeholder="Enter steps walked">
+                </div>
+                <div class="app-input-group">
+                    <label for="activityType">Activity Type</label>
+                    <select id="activityType" class="app-input">
+                        <option value="walking">🚶 Walking</option>
+                        <option value="running">🏃 Running</option>
+                        <option value="cycling">🚴 Cycling</option>
+                        <option value="swimming">🏊 Swimming</option>
+                        <option value="gym">💪 Gym Workout</option>
+                        <option value="yoga">🧘 Yoga</option>
+                    </select>
+                </div>
+                <div class="app-input-group">
+                    <label for="duration">Duration (minutes)</label>
+                    <input type="number" id="duration" class="app-input" placeholder="Exercise duration">
+                </div>
+                <div class="app-input-group">
+                    <label for="waterIntake">Water Glasses</label>
+                    <input type="number" id="waterIntake" class="app-input" placeholder="Glasses of water consumed">
+                </div>
+                <button class="app-btn" onclick="logActivity()">Log Activity</button>
+                <button class="app-btn app-btn-secondary" onclick="simulateActivity()">🎲 Generate Sample Data</button>
+            </div>
+
+            <!-- Progress Dashboard -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">📊</span>
+                    Today's Progress
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Steps Progress</span>
+                        <span id="stepsText">0 / 10000</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="stepsProgress" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Calorie Progress</span>
+                        <span id="caloriesText">0 / 500</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="caloriesProgress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Water Intake</span>
+                        <span id="waterText">0 / 8 glasses</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="waterProgress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalSteps">0</div>
+                        <div class="stat-label">Total Steps</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalCalories">0</div>
+                        <div class="stat-label">Calories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalWater">0</div>
+                        <div class="stat-label">Water</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="currentStreak">0</div>
+                        <div class="stat-label">Streak</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">🏆</span>
+                    Achievements
+                </div>
+                <div id="achievements">
+                    <div style="text-align: center; color: rgba(255, 255, 255, 0.7); padding: 20px;">
+                        Start your fitness journey to unlock achievements!
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div style="color: rgba(255, 255, 255, 0.9); font-weight: 600; margin-bottom: 10px;">Recent Achievements:</div>
+                    <ul id="recentAchievements" style="color: rgba(255, 255, 255, 0.7); padding-left: 20px;">
+                        <li>Welcome to FitTracker Pro! 🚀</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quick Stats Card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">⚡</span>
+                    Quick Actions
+                </div>
+                <div style="display: grid; gap: 15px;">
+                    <button class="app-btn" onclick="quickLog('steps', 1000)">+1000 Steps</button>
+                    <button class="app-btn" onclick="quickLog('water', 2)">+2 Glasses Water</button>
+                    <button class="app-btn" onclick="quickLog('exercise', 15)">+15 Min Exercise</button>
+                    <button class="app-btn app-btn-secondary" onclick="resetDaily()">🔄 Reset Daily Progress</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

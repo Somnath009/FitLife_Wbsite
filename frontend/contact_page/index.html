@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • FitLife</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script defer src="contact.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="../landing_page/hero.html" class="brand">FitLife</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="../landing_page/hero.html#home">Home</a></li>
+        <li><a href="../about_section/index.html">About</a></li>
+        <li><a href="../workout_page/index.html">Workouts</a></li>
+        <li><a href="../nutrition_page/index.html">Nutrition</a></li>
+        <li><a href="../blog_page/index.html">Blog</a></li>
+        <li><a class="active" href="#">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- <button class="icon-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <a class="btn ghost small" href="#">Sign in</a>
+        <a class="btn primary small" href="#">Sign up</a> -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero contact-hero">
+    <div class="hero-content container">
+      <h1>Let’s Connect</h1>
+      <p>Questions, feedback, or campus demo requests—send a message and the team will reply within 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- Contact layout -->
+  <section class="section container contact-grid">
+    <!-- Info panel -->
+    <aside class="card info">
+      <h2>Contact Info</h2>
+      <ul class="list">
+        <li><strong>Email:</strong> hello@fitlife.app</li>
+        <li><strong>Phone:</strong> +91‑90000‑00000</li>
+        <li><strong>Hours:</strong> Mon–Sat, 9am–6pm IST</li>
+        <li><strong>Address:</strong> FitLife HQ, Campus Road, India</li>
+      </ul>
+      <p class="muted">Prefer chat? Reach out via the in‑app support widget from the dashboard.</p>
+    </aside>
+
+    <!-- Form -->
+    <form class="card form" id="contactForm" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Enter name" minlength="2" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@email.com" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" pattern="[0-9+\-\s]{8,}" />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option>General</option>
+            <option>Workouts</option>
+            <option>Nutrition</option>
+            <option>Partnership</option>
+            <option>Campus Demo</option>
+          </select>
+          <small class="error" aria-live="polite"></small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Share details to help us respond faster…" minlength="10" required></textarea>
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="checks">
+        <label class="check">
+          <input type="checkbox" id="consent" required />
+          <span>I agree to the Privacy Policy</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="optin" />
+          <span>Send helpful tips via email</span>
+        </label>
+      </div>
+
+      <button class="btn primary" type="submit" aria-label="Send message">Send Message</button>
+      <p id="formMsg" class="muted" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Map -->
+  <section class="section container">
+    <div class="card map-wrap">
+      <h2 class="map-title">Find us</h2>
+      <div class="map-ratio">
+        <!-- Replace src with your map; this wrapper keeps it responsive -->
+        <iframe
+          class="map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30268.566!2d72.8777!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCampus!5e0!3m2!1sen!2sin!4v1700000000000">
+        </iframe>
+      </div>
+      <p class="muted tip">The iframe is wrapped in a responsive container so it scales on mobile screens. Replace with the official Embed API URL if using your own API key. [Refs] </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><div class="brand">FitLife</div><p>Train smarter, fuel better, live stronger.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="../landing_page/hero.html#workouts">Workouts</a></li><li><a href="../nutrition_page/nutrition.html">Nutrition</a></li><li><a href="../blog_page/blog.html">Blog</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      <div><h4>Contact</h4><p>hello@fitlife.app</p></div>
+    </div>
+    <div class="subfooter">© 2025 FitLife. All rights reserved.</div>
+  </footer>
+</body>
+</html>
